@@ -6,21 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "bunx serve@latest out",
-    "lint": "eslint"
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint-fix": "eslint './src/**/*.{ts,tsx}' --fix"
   },
   "dependencies": {
-    "@types/node": "^22.7.7",
-    "@types/react": "^18.3.11",
+    "@types/node": "^22.7.9",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.13.0",
-    "eslint-config-next": "^14.2.15",
-    "next": "^14.2.15",
+    "eslint-config-next": "^15.0.1",
+    "next": "^15.0.1",
     "postcss": "^8.4.47",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
+  "devDependencies": {
+    "typescript-eslint": "^8.11.0"
+  }
 }

@@ -1,8 +1,11 @@
 import nextPlugin from '@next/eslint-plugin-next';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
-    files: ['**/*.ts', '**/*.tsx'],
+    files: ['./src/**/*.{ts,tsx}'],
     ignores: [
       '**/*.d.ts',
       '*.js',
@@ -10,6 +13,7 @@ export default [
       'src/next-env.d.ts',
       'src/stories',
       'node_modules/**/*',
+      'out',
     ],
     plugins: {
       '@next/next': nextPlugin,
@@ -24,4 +28,4 @@ export default [
   {
     ignores: ['./.next/*'],
   },
-];
+);
