@@ -1,5 +1,11 @@
-import nextPlugin from '@next/eslint-plugin-next';
 import tseslint from 'typescript-eslint';
+import js from '@eslint/js';
+import { FlatCompat } from '@eslint/eslintrc';
+const compat = new FlatCompat({
+  // import.meta.dirname is available after Node.js v20.11.0
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+});
 
 export default tseslint.config(
   ...tseslint.configs.strict,
@@ -14,18 +20,10 @@ export default tseslint.config(
       'src/stories',
       'node_modules/**/*',
       'out',
+      './.next/*'
     ],
-    plugins: {
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
-      '@next/next/no-duplicate-head': 'off',
-      '@next/next/no-img-element': 'error',
-    },
-  },
-  {
-    ignores: ['./.next/*'],
+    ...compat.config({
+      extends: ['eslint:recommended', 'next'],
+    }),
   },
 );
