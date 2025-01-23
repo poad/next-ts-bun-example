@@ -1,15 +1,19 @@
 import tseslint from 'typescript-eslint';
-import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import { FlatCompat } from "@eslint/eslintrc";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
+  baseDirectory: __dirname,
 });
 
 export default tseslint.config(
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     files: ['./src/**/*.{ts,tsx}'],
     ignores: [
@@ -22,8 +26,5 @@ export default tseslint.config(
       'out',
       './.next/*'
     ],
-    ...compat.config({
-      extends: ['eslint:recommended', 'next'],
-    }),
   },
 );
