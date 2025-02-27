@@ -11,35 +11,35 @@
     "lint-fix": "eslint --fix"
   },
   "dependencies": {
-    "next": "^15.1.7",
+    "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.7",
     "@eslint/js": "^9.21.0",
-    "@next/eslint-plugin-next": "^15.1.7",
-    "@stylistic/eslint-plugin": "^4.0.1",
-    "@stylistic/eslint-plugin-js": "^4.0.1",
-    "@stylistic/eslint-plugin-jsx": "^4.0.1",
-    "@stylistic/eslint-plugin-plus": "^4.0.1",
-    "@stylistic/eslint-plugin-ts": "^4.0.1",
-    "@tailwindcss/postcss": "^4.0.8",
+    "@next/eslint-plugin-next": "^15.2.0",
+    "@stylistic/eslint-plugin": "^4.1.0",
+    "@stylistic/eslint-plugin-js": "^4.1.0",
+    "@stylistic/eslint-plugin-jsx": "^4.1.0",
+    "@stylistic/eslint-plugin-plus": "^4.1.0",
+    "@stylistic/eslint-plugin-ts": "^4.1.0",
+    "@tailwindcss/postcss": "^4.0.9",
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.21.0",
-    "eslint-config-next": "^15.1.7",
+    "eslint-config-next": "^15.2.0",
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
-    "pnpm": "^10.5.0",
+    "pnpm": "^10.5.2",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.8",
+    "tailwindcss": "^4.0.9",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.25.0",
     "web-vitals": "^4.2.4"
   },
-  "packageManager": "pnpm@10.5.0+sha512.11106a5916c7406fe4b8cb8e3067974b8728f47308a4f5ac5e850304afa6f57e2847d7950dfe78877d8d36bfb401d381c4215db3a4c3547ffa63c14333a6fa51"
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
