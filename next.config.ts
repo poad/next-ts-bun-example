@@ -1,12 +1,12 @@
-import { NextConfig } from "next"
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: 'export',
   reactStrictMode: true,
   cleanDistDir: true,
   images: {
     unoptimized: true,
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
