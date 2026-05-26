@@ -1,6 +1,13 @@
+allowBuilds:
+  sharp: false
+  unrs-resolver: false
+
+blockExoticSubdeps: true
+
+minimumReleaseAge: 10080 # 7 days in minutes
+
 overrides:
-  "@types/react": "^19.2.2"
-  "@types/react-dom": "^19.2.2"
-  "@types/node": "^24"
-  "@eslint/js": "^9"
-  "eslint": "^9"
+  eslint-import-resolver-typescript: '^4.4.4'
+  semver: '>=7'
+
+trustPolicy: no-downgrade

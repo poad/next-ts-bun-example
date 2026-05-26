@@ -13,9 +13,8 @@ if [ $result -ne 0 ]; then
   exit $result
 fi
 pwd
-npx -y pnpm@latest self-update && rm -rf node_modules && pnpm up -r && rm -rf node_modules pnpm-lock.yaml && bun i && bun run --bun lint && bun run --bun build
-result=$?
-if [ $result -ne 0 ]; then
+
+if ! (pnpm dlx pnpm@latest self-update && rm -rf node_modules && pnpm up -r && rm -rf node_modules pnpm-lock.yaml && bun i && bun run --bun lint && bun run --bun build); then
   cd "${CUR}" || exit
   exit $result
 fi
